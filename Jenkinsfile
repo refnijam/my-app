@@ -26,6 +26,6 @@ node{
 	}	
    }
   stage('Docker deployment'){
-   sh 'docker run -d -p 8090:8080 --name tomcattest nijamnar/demo:0.0.1' 
+   sh 'docker run -d -p 8091:8080 --name tomcattest nijamnar/demo:0.0.1' 
    }	
 }
