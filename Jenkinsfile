@@ -24,6 +24,7 @@ node{
 	}catch(error){
 		//  do nothing if there is an exception
 	}	
+   }
   stage('Docker deployment'){
    sh 'docker run -d -p 8090:8080 --name tomcattest nijamnar/demo:0.0.1' 
    }	
