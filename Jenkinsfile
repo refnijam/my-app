@@ -10,12 +10,12 @@ node{
 	  sh 'mv target/myweb*.war target/newapp.war'
    }
  stage('Build Docker Imager'){
-   sh 'docker build -t Demo/myweb:0.0.2 .'
+   sh 'docker build -t demo/myweb:0.0.1 .'
    }
    stage('Docker Image Push'){
    withCredentials([string(credentialsId: 'dockerPass', variable: 'dockerPassword')]) {
    sh "docker login -u nijamnar -p ${dockerPassword}"
     }
-   sh 'docker push Demo/myweb:0.0.2'
+   sh 'docker push demo/myweb:0.0.1'
    }
 }
